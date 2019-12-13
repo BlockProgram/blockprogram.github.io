@@ -14,7 +14,7 @@
         margin-top: 0;
       }
       a {
-        color: #f00;
+        color: inherit;
       }
       .bio-box div {
         border: 1px solid #008000;
@@ -23,11 +23,8 @@
       /* HERO STYLES */
       .full-hero {
         background-color: #c7dbfc;
-        height: 50vw;
-        width: 50vw;
+        height: 50vh;
       }
-
-
 
       /* SOCIAL STYLES */
       .social-link {
@@ -35,50 +32,61 @@
         background-color: pink;
         display: inline-block;
         height: 36px;
+        width: 36px;
       }
-      .social-link a {
-        color: #0000ff;
+      .social-list {
+        list-style: none;
+        padding: 0;
+        text-align: right;
       }
-
+      .social-list > li {
+        display: inline-block;
+      }
       /* BIO STYLES  */
       .bio-box {
         border: 1px solid #000000;
-        width: 50%;
-        padding: 1em;
+        box-sizing: border-box;
+        float: left;
         font-size: 1em;
+        width: 25%;
+        padding: 2%;
       }
       .bio-box h3 {
         font-size: 1.5em;
       }
+      .bio-box > a {
+        color: #c68bf9; 
+      }
       .bio-copy a {
         color: #008000;
       }
+      .bio-wrapper {
+        background-color:;
+        overflow: hidden;
+      }
+
     </style>
   </head>
 
   <body>
     <div class="full-hero hero-home">
-      <h1 class="social-link">I'm an h1</h1>
-      <ul>
-        <div class="social-link">
-
+      <h1>I'm an h1</h1>
+      <ul class="social-list" >
         <li>
-          <a href="https://example.com/">Link</a>
+          <a href="https://example.com/" class="social-link">Link1</a>
         </li>
         <li>
-          <a href="https://example.com/">Link</a>
+          <a href="https://example.com/" class="social-link">Link2</a>
         </li>
         <li>
-          <a href="https://example.com/">Link</a>
+          <a href="https://example.com/" class="social-link">Link3</a>
         </li>
-        </div>
       </ul>
     </div>
 
       <h2>I'm an h2</h2>
 
       <div class="bio-wrapper">
-
         <div class="bio-box">
           <h3>Michael Hartl</h3>
           <a href="https://twitter.com/mhartl" class="social-link show">here</a>
@@ -131,7 +139,35 @@
             The Future
           </p>
         </div>
-
       </div>
+
+      <p>
+          Learn Enough to Be Dangerous is a leader in the movement to teach the
+          world <em>technical sophistication</em>, which includes both "hard
+          skills" like coding, command lines, and version control, and "soft
+           skills" like guessing keyboard shortcuts, Googling error messages, and
+          knowing when to just reboot the darn thing.
+        </p>
+        <p>
+          We believe there are <strong>at least a billion people</strong> who can
+          benefit from learning technical sophistication, probably more. To join
+          our movement,
+          <a href="https://learnenough.com/#email_list">sign up for our official
+          email list</a> now.
+        </p>
+        <h3>Background</h3>
+        <p>
+          Learn Enough to Be Dangerous is an outgrowth of the
+          <a href="https://www.railstutorial.org/">Ruby on Rails Tutorial</a> and the
+          <a href="https://www.softcover.io/">Softcover publishing platform</a>.
+          This page is part of the sample site for
+          <a href="https://learnenough.com/css-tutorial"><em>Learn Enough CSS and
+          Layout to Be Dangerous</em></a>, which teaches the basics of
+          <strong>C</strong>ascading <strong>S</strong>tyle
+          <strong>S</strong>heets, the language that allows web pages to be styled.
+          Other related tutorials can be found at
+          <a href="https://learnenough.com/">learnenough.com</a>.
+        </p>
+
     </body>
   </html>
