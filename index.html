@@ -49,8 +49,17 @@ layout: default
     </div>
   </div>
 
-  <div class="home-section">
+<div class="home-section">
 
+  <h4>MOST RECENT POST</h4>
+
+  {% for post in site.posts limit:1 %}
+    {% include post-excerpt.html %}
+  {% endfor %}
+
+</div>
+
+  <div class="home-section">
 
     <h2>THE FOUNDERS</h2>
       <p>
