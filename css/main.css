@@ -499,7 +499,7 @@ h2 ~ p {
 }
 
 
-@media (max-width: 800px) {
+@media (max-width: 900px) {
  html {
    box-shadow: none;
    padding: 0;
