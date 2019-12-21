@@ -276,6 +276,19 @@ h2 ~ p {
 .footer-nav a {
   color: #ccc;
 }
+.footer-social-links li {
+  display: inline-block;
+  margin: 1.5em 1em 0;
+}
+.footer-social-links li:first-child  a:hover  {
+  background-color: #1364d6;
+}
+.footer-social-links li:last-child  a:hover  {
+  background-color: #1d1e1f;
+}
+.twitter-link:hover {
+  background-color: #4db4e8;
+}
 
 /* COLUMN STYLES */
 .col-three  {
@@ -406,6 +419,9 @@ h2 ~ p {
 .social-list > li {
   display: inline-block;
   margin: 0 0.5em;
+}
+.bio-box .social-link:hover {
+  background-color: #4db4e8;
 }
 
 /* HOMEPAGE STYLES */
