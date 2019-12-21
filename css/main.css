@@ -647,7 +647,8 @@ h2 ~ p {
   }
   .header-nav li {
     display: block;
-    margin-top: 1em;
+    margin-top: 1em 0 0;
+    padding: 0;
   }
   .header-nav li:last-child {
     margin-bottom: 1em;
@@ -677,9 +678,8 @@ h2 ~ p {
     text-align: center;
   }
   .header-nav li ~ li {
-    margin: 1em 0 0;
-    padding: 0;
     border: 0;
+    padding: 0; 
   }
 
 
