@@ -286,9 +286,6 @@ h2 ~ p {
 .footer-social-links li:last-child  a:hover  {
   background-color: #1d1e1f;
 }
-.twitter-link:hover {
-  background-color: #4db4e8;
-}
 
 /* COLUMN STYLES */
 .col-three  {
@@ -423,7 +420,9 @@ h2 ~ p {
 .bio-box .social-link:hover {
   background-color: #4db4e8;
 }
-
+.twitter-link:hover {
+  background-color: #4db4e8;
+}
 /* HOMEPAGE STYLES */
 .home-callout {
   align-items: center;
