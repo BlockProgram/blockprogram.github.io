@@ -81,7 +81,7 @@ h4 {
   text-transform: uppercase;
 }
 a {
-  color: #6397b5;
+  color: #397b5;
 }
 p {
   line-height: 1.5;
@@ -387,8 +387,15 @@ h2 ~ p {
   background-position: center center;
   background-size: cover;
   height: 43vh;
-  /* box-sizing: border-box; */
+  box-sizing: border-box;
 }
+.hero-content .github-link {
+  color: #000;
+}
+.hero-content .github-link:hover {
+  color: #fff;
+}
+
 
 /* SOCIAL STYLES */
 .social-link {
@@ -420,9 +427,7 @@ h2 ~ p {
 .bio-box .social-link:hover {
   background-color: #4db4e8;
 }
-.twitter-link:hover {
-  background-color: #4db4e8;
-}
+
 /* HOMEPAGE STYLES */
 .home-callout {
   align-items: center;
