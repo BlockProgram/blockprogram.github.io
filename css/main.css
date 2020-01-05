@@ -280,11 +280,16 @@ h2 ~ p {
   display: inline-block;
   margin: 1.5em 1em 0;
 }
+.footer .social-link:hover {
+  background-color: #34A1F2;
+}
 .footer-social-links li:first-child  a:hover  {
   background-color: #1364d6;
+  color: #fff;
 }
 .footer-social-links li:last-child  a:hover  {
-  background-color: #1d1e1f;
+  background-color: #fff;
+  color: #000;
 }
 
 /* COLUMN STYLES */
