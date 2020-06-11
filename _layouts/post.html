@@ -1,38 +1,87 @@
----
-layout: default
----
+<!DOCTYPE html>
+<html>
+  <head>
+    {% if page.title %}
+    <title>{{ page.title }} | BlockProgram</title>
+    {% else %}
+    <title>Block Program</title>
+    {% endif %} {% if page.description %}
+    <meta name="description" content="{{ page.description }}" />
+    {% else %}
+    <meta
+      name="description"
+      content="Website by BlockProgram for Learn Enough CSS & Layout"
+    />
+    {% endif %} {% if page.title %}
+    <meta property="og:title" content="{{ page.title }} | BlockProgram" />
+    {% else %}
+    <meta property="og:title" content="Block Program" />
+    {% endif %} {% if page.description %}
+    <meta property="og:description" content="C{{ page.description }}" />
+    {% else %}
+    <meta
+      property="og:description"
+      content="Website by BlockProgram for Learn Enough CSS & Layout"
+    />
+    {% endif %}
+    <link href="../../../favicon.png" rel="icon" />
+    <link rel="apple-touch-icon" href="../../../apple-touch-icon.png" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="../../../css/main.css" />
+    <link
+      rel="stylesheet"
+      href="../../../fonts/fontawesome-free-5.12.0-web/css/all.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css?family=Open+Sans|Raleway:100,300&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<div class="post">
-  <div class="half-hero" style="background-image:url({{ page.postHero }})"></div>
+  <body>
+    {% include header.html %}
 
-  <article class="page">
-    <header class="post-header">
-      <h1>{{ page.title }}</h1>
-      <div class="post-byline">
-        <img src="{{ page.gravatar }}">
-        <a href="{{ page.authorTwitter }}" class=" twitter-link social-link">
-          <i class="fab fa-twitter"></i>
-        </a>
-        by: {{ page.author }}
-        <span> - {{ page.date | date: '%B %d, %Y' }}</span>
+    <div class="content-container">
+      <div class="post">
+        <div class="half-hero"></div>
+
+        <article class="page">
+          <header class="post-header">
+            <h1>{{ page.title }}</h1>
+            <div class="post-byline">
+              <img src="{{ page.gravatar }}" />
+              <a
+                href="{{ page.authorTwitter }}"
+                class="twitter-link social-link"
+              >
+                <i class="fab fa-twitter"></i>
+              </a>
+              by: {{ page.author }}
+              <span> - {{ page.date | date: '%B %d, %Y' }}</span>
+            </div>
+          </header>
+          <aside class="post-aside">
+            <h4>Recent Posts</h4>
+            <ul class="blog-title-list">
+              {% for post in site.posts limit:5 %}
+              <li>
+                <a href="{{ post.url }}">{{ post.title }}</a>
+                <span>Posted: {{ post.date | date: '%B %d, %Y' }}</span>
+              </li>
+              {% endfor %}
+            </ul>
+          </aside>
+          <div class="post-content">
+            {{ content }}
+          </div>
+          <footer class="post-footer">
+            {{ page.postFooter }}
+          </footer>
+        </article>
       </div>
-    </header>
-    <aside class="post-aside">
-      <h4>Recent Posts</h4>
-      <ul class="blog-title-list">
-        {% for post in site.posts limit:5 %}
-          <li>
-            <a href="{{ post.url }}">{{ post.title }}</a>
-            <span>Posted: {{ post.date | date: '%B %d, %Y' }}</span>
-          </li>
-        {% endfor %}
-      </ul>
-    </aside>
-    <div class="post-content">
-      {{ content }}
     </div>
-    <footer class="post-footer">
-      {{ page.postFooter }}
-    </footer>
-  </article>
-</div>
+
+    {% include footer.html %}
+  </body>
+</html>
